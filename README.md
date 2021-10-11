@@ -3,7 +3,7 @@ DVC project for DL usecase using tensorflow
 
 ## Project structure -
 
-![](docs/images/DVC-CNN-pipeline@2x\ (1).png)
+![](https://github.com/c17hawke/DVC-CNN-TF-pipeline-demo/blob/main/docs/images/DVC-CNN-pipeline@2x%20(1).png?raw=true)
 
 ## STEPS -
 
