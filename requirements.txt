@@ -1,6 +1,7 @@
 ### dependency
 tqdm
 dvc
+tensorflow==2.5.0
 
 
 ### local packages -
