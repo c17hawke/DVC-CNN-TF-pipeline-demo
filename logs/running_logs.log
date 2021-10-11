@@ -1,0 +1,36 @@
+[2021-10-11 11:06:15,077: INFO: stage_01_get_data]: 
+********************
+[2021-10-11 11:06:15,077: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2021-10-11 11:06:15,079: INFO: common]: content from configs/config.yaml read successfully!!
+[2021-10-11 11:06:15,111: INFO: common]: Directory is created at data/cat
+[2021-10-11 11:06:15,260: INFO: common]: all the files has been copied from ../outside_data/cat to data/cat
+[2021-10-11 11:06:15,279: INFO: common]: Directory is created at data/dog
+[2021-10-11 11:06:15,506: INFO: common]: all the files has been copied from ../outside_data/dog to data/dog
+[2021-10-11 11:06:15,507: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<n
+[2021-10-11 11:08:01,008: INFO: stage_01_get_data]: 
+********************
+[2021-10-11 11:08:01,008: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2021-10-11 11:08:01,009: INFO: common]: content from configs/config.yaml read successfully!!
+[2021-10-11 11:08:01,026: INFO: common]: Directory is created at data/cat
+[2021-10-11 11:08:01,159: INFO: common]: all the files has been copied from ../outside_data/cat to data/cat
+[2021-10-11 11:08:01,159: INFO: common]: Directory is created at data/dog
+[2021-10-11 11:08:01,339: INFO: common]: all the files has been copied from ../outside_data/dog to data/dog
+[2021-10-11 11:08:01,340: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<n
+[2021-10-11 11:08:21,003: INFO: stage_01_get_data]: 
+********************
+[2021-10-11 11:08:21,003: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2021-10-11 11:08:21,005: INFO: common]: content from configs/config.yaml read successfully!!
+[2021-10-11 11:08:21,020: INFO: common]: Directory is created at data/cat
+[2021-10-11 11:08:21,145: INFO: common]: all the files has been copied from ../outside_data/cat to data/cat
+[2021-10-11 11:08:21,147: INFO: common]: Directory is created at data/dog
+[2021-10-11 11:08:21,340: INFO: common]: all the files has been copied from ../outside_data/dog to data/dog
+[2021-10-11 11:08:21,341: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<n
+[2021-10-11 11:33:25,765: INFO: stage_01_get_data]: 
+********************
+[2021-10-11 11:33:25,765: INFO: stage_01_get_data]: >>>>> stage one started <<<<<
+[2021-10-11 11:33:25,766: INFO: common]: content from configs/config.yaml read successfully!!
+[2021-10-11 11:33:25,786: INFO: common]: Directory is created at data/cat
+[2021-10-11 11:33:25,985: INFO: common]: all the files has been copied from ../outside_data/cat to data/cat
+[2021-10-11 11:33:25,986: INFO: common]: Directory is created at data/dog
+[2021-10-11 11:33:26,249: INFO: common]: all the files has been copied from ../outside_data/dog to data/dog
+[2021-10-11 11:33:26,250: INFO: stage_01_get_data]: >>>>> stage one completed! all the data are saved in local <<<<<n
