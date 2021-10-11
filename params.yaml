@@ -1,1 +1,6 @@
 # This contains params to be used by the stages to train or predict
+
+IMAGE_SIZE: [224, 224, 3] # images size used in VGG16 model
+BATCH_SIZE: 16 # default is 32
+EPOCHS: 2
+LEARNING_RATE: 0.001
