@@ -1,6 +1,10 @@
 # DVC-CNN-TF-pipeline-demo
 DVC project for DL usecase using tensorflow
 
+## Project structure -
+
+![](docs/images/DVC-CNN-pipeline@2x\ (1).png)
+
 ## STEPS -
 
 ### STEP 01- Create a repository by using template repository
