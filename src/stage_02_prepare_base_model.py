@@ -14,11 +14,18 @@ logging.basicConfig(
     )
 
 def prepare_base_model(config_path: str, params_path: str) -> None:
+    """prepares and saves the untrained model 
+    that can be used for training later on the given data
+
+    Args:
+        config_path (str): path to configuration file
+        params_path (str): path to params file
+    """
     config = read_yaml_file(config_path)
     params = read_yaml_file(params_path)
 
     artifacts = config["artifacts"]
-    artifacts_dir = config["ARTIFACTS_DIR"]
+    artifacts_dir = artifacts["ARTIFACTS_DIR"]
 
     base_model_dir = artifacts["BASE_MODEL_DIR"]
     base_model_name = artifacts["BASE_MODEL_NAME"]
@@ -28,13 +35,21 @@ def prepare_base_model(config_path: str, params_path: str) -> None:
 
     base_model_path = os.path.join(base_model_dir_path, base_model_name)
 
-    base_model = get_VGG16_model()
+    base_model = get_VGG16_model(
+        input_shape=params["IMAGE_SIZE"], 
+        model_path=base_model_path)
 
-    full_model = prepare_full_model(base_model)
+    full_model = prepare_full_model(
+        base_model,
+        learning_rate=params["LEARNING_RATE"],
+        CLASSES = 2,
+        freeze_all=True,
+        freeze_till=None)
 
-    updated_base_model_path = os.path.join(base_model_dir_path, artifacts["UPDATED_BASE_MODEL_NAME"])
+    updated_full_model_path = os.path.join(base_model_dir_path, artifacts["UPDATED_BASE_MODEL_NAME"])
 
-    full_model.save(updated_base_model_path)
+    full_model.save(updated_full_model_path)
+    logging.info(f"full untrained model is saved at {updated_full_model_path}")
 
 
 if __name__ == '__main__':
