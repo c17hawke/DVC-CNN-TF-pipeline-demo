@@ -27,7 +27,7 @@ def get_data(config_path: str) -> None:
     for source_data_dir, local_data_dir in tqdm(
         zip(source_data_dirs, local_data_dirs),
         total=N,
-        color="red",
+        colour="red",
         desc="copying directory:",
     ):
         create_directories([local_data_dir])
