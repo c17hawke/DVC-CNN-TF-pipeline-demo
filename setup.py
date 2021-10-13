@@ -10,13 +10,14 @@ SRC_REPO = "src"
 LIST_OF_REQUIREMENTS = [
     "dvc==2.7.2",
     "tqdm==4.62.3",
-    "tensorflow==2.5.0"
+    "tensorflow==2.5.0",
+    "joblib==1.1.0"
 ]
 
 
 setup(
     name=SRC_REPO,
-    version="0.0.2",
+    version="0.0.3",
     author=AUTHOR_USER_NAME,
     description="A small package for DVC",
     long_description=long_description,
