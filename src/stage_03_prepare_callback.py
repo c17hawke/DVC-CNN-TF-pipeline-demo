@@ -3,7 +3,7 @@ import os
 import logging
 import time
 from src.utils.common import read_yaml_file, create_directories
-# from src.utils.callbacks import create_and_save_tensorboard_callbacks,create_and_save_checkpointing_callbacks
+from src.utils.callbacks import create_and_save_tensorboard_callbacks,create_and_save_checkpointing_callbacks
 
 
 
@@ -14,7 +14,12 @@ logging.basicConfig(
     filemode="a"
     )
 
-def prepare_callbacks(config_path):
+def prepare_callbacks(config_path: str) -> None:
+    """prepare and save callbacks as binary
+
+    Args:
+        config_path (str): path to configuration file
+    """
     config = read_yaml_file(config_path)
 
     artifacts = config["artifacts"]
@@ -32,9 +37,9 @@ def prepare_callbacks(config_path):
         callbacks_dir
     ])
 
-    # create_and_save_tensorboard_callbacks(callbacks_dir, tensorboard_log_dir)
+    create_and_save_tensorboard_callbacks(callbacks_dir, tensorboard_log_dir)
 
-    # create_and_save_checkpointing_callbacks(callbacks_dir)
+    create_and_save_checkpointing_callbacks(callbacks_dir, checkpoint_dir)
 
 
 
