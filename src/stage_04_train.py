@@ -4,6 +4,7 @@ from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml_file, create_directories
 from src.utils.model import load_full_model
+from src.utils.callbacks import get_callbacks
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
@@ -29,9 +30,11 @@ def train_model(config_path: str, params_path: str) -> None:
 
 
     ###  get the callbacks
+    callback_dir_path = os.path.join(artifacts_dir, artifacts["CALLBACKS_DIR"])
+    callbacks = get_callbacks(callback_dir_path)
 
     ### get the data to create data generator
-
+    
 
     ### train the model
 

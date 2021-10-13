@@ -50,3 +50,17 @@ def create_and_save_checkpointing_callback(callbacks_dir: str, checkpoint_dir: s
     joblib.dump(checkpoint_callback, ckpt_callback_filepath)
 
     logging.info(f"checkpoint callback is saved at {ckpt_callback_filepath} as binary file")
+
+
+def get_callbacks(callback_dir_path: str):
+    
+    callback_paths = [
+        os.path.join(callback_dir_path, pickle_file) for pickle_file in os.listdir(callback_dir_path) if pickle_file.endswith(".cb")
+    ]
+    callbacks = [
+        joblib.load(path) for path in callback_paths
+    ]
+
+    logging.info(f"saved callbacks are not reeady to use")
+    
+    return callbacks
