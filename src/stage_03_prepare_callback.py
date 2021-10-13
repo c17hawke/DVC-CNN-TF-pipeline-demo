@@ -3,7 +3,7 @@ import os
 import logging
 import time
 from src.utils.common import read_yaml_file, create_directories
-from src.utils.callbacks import create_and_save_tensorboard_callbacks,create_and_save_checkpointing_callbacks
+from src.utils.callbacks import create_and_save_tensorboard_callback,create_and_save_checkpointing_callback
 
 
 
@@ -37,9 +37,9 @@ def prepare_callbacks(config_path: str) -> None:
         callbacks_dir
     ])
 
-    create_and_save_tensorboard_callbacks(callbacks_dir, tensorboard_log_dir)
+    create_and_save_tensorboard_callback(callbacks_dir, tensorboard_log_dir)
 
-    create_and_save_checkpointing_callbacks(callbacks_dir, checkpoint_dir)
+    create_and_save_checkpointing_callback(callbacks_dir, checkpoint_dir)
 
 
 
