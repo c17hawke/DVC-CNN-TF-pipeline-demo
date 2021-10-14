@@ -2,6 +2,6 @@
 
 IMAGE_SIZE: [224, 224, 3] # images size used in VGG16 model
 BATCH_SIZE: 16 # default is 32
-EPOCHS: 2
+EPOCHS: 10
 LEARNING_RATE: 0.001
 AUGMENTATION: True
