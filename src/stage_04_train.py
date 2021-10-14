@@ -49,6 +49,19 @@ def train_model(config_path: str, params_path: str) -> None:
     )
 
     ### train the model
+    steps_per_epoch = train_generator.samples // train_generator.batch_size
+    validation_steps = valid_generator.samples // valid_generator.batch_size
+
+    model.fit(
+        train_generator, 
+        validation_data=valid_generator, 
+        epochs=params["EPOCHS"], 
+        steps_per_epoch=steps_per_epoch, 
+        validation_steps=validation_steps, 
+        callbacks=callbacks
+        )
+
+    ### save the trained model
 
 
 
