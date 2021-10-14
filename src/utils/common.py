@@ -3,7 +3,7 @@ import yaml
 import logging
 import shutil
 from tqdm import tqdm
-
+import time
 
 def read_yaml_file(path_to_yaml_file: str) -> dict:
     """it reads yaml file into dictionory
@@ -55,3 +55,16 @@ def copy_files(source_data_dir: str, local_data_dir: str) -> None:
     logging.info(
         f"all the files has been copied from {source_data_dir} to {local_data_dir}"
     )
+
+def get_timestamp(name: str) -> str:
+    """create unique name with timestamp
+
+    Args:
+        name (str): name of file or directory
+
+    Returns:
+        str: unique name with timestamp
+    """
+    timestamp = time.asctime().replace(" ", "_").replace(":", ".")
+    unique_name = f"{name}_at_{timestamp}"
+    return unique_name

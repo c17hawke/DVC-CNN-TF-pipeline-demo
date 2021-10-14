@@ -1,22 +1,10 @@
 import tensorflow as tf
 import os
 import joblib
-import time
 import logging
+from src.utils.common import get_timestamp
 
 
-def get_timestamp(name: str) -> str:
-    """create unique name with timestamp
-
-    Args:
-        name (str): name of file or directory
-
-    Returns:
-        str: unique name with timestamp
-    """
-    timestamp = time.asctime().replace(" ", "_").replace(":", ".")
-    unique_name = f"{name}_at_{timestamp}"
-    return unique_name
 
 def create_and_save_tensorboard_callback(callbacks_dir: str, tensorboard_log_dir: str) -> None:
     """create and save tensorboard_callbacks as binary for later use
