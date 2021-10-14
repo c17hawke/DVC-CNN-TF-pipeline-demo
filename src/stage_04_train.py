@@ -5,6 +5,7 @@ import logging
 from src.utils.common import read_yaml_file, create_directories
 from src.utils.model import load_full_model
 from src.utils.callbacks import get_callbacks
+from src.utils.data_management import train_valid_generator
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
@@ -14,6 +15,12 @@ logging.basicConfig(
     )
 
 def train_model(config_path: str, params_path: str) -> None:
+    """function to train the model and save it into
+
+    Args:
+        config_path (str): path to config file
+        params_path (str): path to params file
+    """
     config = read_yaml_file(config_path)
     params = read_yaml_file(params_path)
 
@@ -34,7 +41,12 @@ def train_model(config_path: str, params_path: str) -> None:
     callbacks = get_callbacks(callback_dir_path)
 
     ### get the data to create data generator
-    
+    train_generator, valid_generator = train_valid_generator(
+        data_dir=artifacts["DATA_DIR"],
+        IMAGE_SIZE=tuple(params["IMAGE_SIZE"][:-1]),
+        BATCH_SIZE=params["BATCH_SIZE"],
+        do_data_augmention=params["AUGMENTATION"]
+    )
 
     ### train the model
 
