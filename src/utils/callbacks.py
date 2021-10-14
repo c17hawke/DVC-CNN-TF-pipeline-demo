@@ -61,6 +61,6 @@ def get_callbacks(callback_dir_path: str):
         joblib.load(path) for path in callback_paths
     ]
 
-    logging.info(f"saved callbacks are now reeady to use")
+    logging.info(f"saved callbacks are now reeady to be used")
     
     return callbacks
